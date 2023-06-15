@@ -6,13 +6,19 @@ const Header = () => {
   const [emotion, setEmotion] = useState("sad");
   const [headerColor, setHeaderColor] = useState("#282c34");
 
+  const handleColor = () => {
+    setHeaderColor("gray");
+    // let h = document.getElementsByClassName()
+    console.log(headerColor)
+  }
+
   return (
     <>
       <header className="App-header">
         This is the Header component.
         <p>You have chose {emotion}</p>
         <button onClick={() => setEmotion("happy")}>Change emotion</button>
-        You have chose
+        <button onClick={() => handleColor()}>Change color</button>
       </header>
     </>
   );
