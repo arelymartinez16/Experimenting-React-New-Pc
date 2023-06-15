@@ -27,6 +27,7 @@ const Header = () => {
         <p>You have chose {emotion}</p>
         <button onClick={() => setEmotion("happy")}>Change emotion</button>
         <button onClick={() => handleColor()}>Change color</button>
+        <input type='color' />
       </header>
     </>
   );
