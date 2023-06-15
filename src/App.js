@@ -9,9 +9,10 @@ const Header = () => {
   const [emotion, setEmotion] = useState("sad");
   const [headerColor, setHeaderColor] = useState("#282c34");
 
-  const handleColor = () => {
-    setHeaderColor("gray");
+  const handleColor = (e) => {
+    // setHeaderColor("gray");
     // let h = document.getElementsByClassName()
+    setHeaderColor(e)
     console.log(headerColor)
   }
   useEffect(() => {
@@ -26,8 +27,8 @@ const Header = () => {
         This is the Header component.
         <p>You have chose {emotion}</p>
         <button onClick={() => setEmotion("happy")}>Change emotion</button>
-        <button onClick={() => handleColor()}>Change color</button>
-        <input type='color' />
+        {/* <button onClick={() => handleColor()}>Change color</button> */}
+        <input type='color' onSelect={(e) => handleColor(e.target.value)} />
       </header>
     </>
   );
