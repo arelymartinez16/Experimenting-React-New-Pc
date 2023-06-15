@@ -2,6 +2,8 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 
+// function 
+
 // creating component in same file
 const Header = () => {
   const [emotion, setEmotion] = useState("sad");
@@ -12,10 +14,14 @@ const Header = () => {
     // let h = document.getElementsByClassName()
     console.log(headerColor)
   }
+  useEffect(() => {
+    let headerToChange = document.getElementById("header_ID")
+    headerToChange.style.backgroundColor = headerColor
+  }, [headerColor])
 
   return (
     <>
-      <header className="App-header">
+      <header id='header_ID' className="App-header">
         <Navbar />
         This is the Header component.
         <p>You have chose {emotion}</p>
