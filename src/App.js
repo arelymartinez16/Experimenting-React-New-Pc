@@ -1,5 +1,6 @@
 import './App.css';
 import { useState, useEffect } from 'react';
+import Navbar from './components/Navbar';
 
 // creating component in same file
 const Header = () => {
@@ -15,6 +16,7 @@ const Header = () => {
   return (
     <>
       <header className="App-header">
+        <Navbar />
         This is the Header component.
         <p>You have chose {emotion}</p>
         <button onClick={() => setEmotion("happy")}>Change emotion</button>
