@@ -1,8 +1,26 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
+import { Home } from './components/Home';
+import { Dashboard } from './components/Dashboard';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-// function 
+function MyRoutes() {
+  return (
+    <>
+      <Header>
+        <Navbar />
+      </Header>
+
+      <Routes>
+        <Route path='/' element={<Layout />} />
+        <Route path='/home' element={<Home />}/>
+        <Route path='/dashboard' element={<Dashboard />}/>
+      </Routes>
+    </>
+    
+  )
+}
 
 // creating component in same file
 const Header = () => {
@@ -23,7 +41,6 @@ const Header = () => {
   return (
     <>
       <header id='header_ID' className="App-header">
-        <Navbar />
         This is the Header component.
         <p>You have chose {emotion}</p>
         <button onClick={() => setEmotion("happy")}>Change emotion</button>
