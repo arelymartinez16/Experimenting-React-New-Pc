@@ -10,10 +10,10 @@ const Navbar = () => {
                 <div className="container">
                     <ul>
                         <li>
-                        <NavLink to="/homebase" onClick={() => navigate("/data")}>Show Data</NavLink>
+                        <NavLink to="/homebase" onClick={() => navigate("/home")}>Home Base</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/retrievedata" onClick={() => navigate("/data")}>Show Data</NavLink>
+                            <NavLink to="/retrievedata" onClick={() => navigate("/dashboard")}>Dashboard</NavLink>
                         </li>
                     </ul>
                 </div>

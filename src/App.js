@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import { Home } from './components/Home';
 import { Dashboard } from './components/Dashboard';
+import { Layout } from './components/Layout';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function MyRoutes() {
