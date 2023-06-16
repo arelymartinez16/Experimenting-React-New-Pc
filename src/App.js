@@ -9,10 +9,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function MyRoutes() {
   return (
     <>
-      <Header>
-        <Navbar />
-      </Header>
-
+      <Header />
       <Routes>
         <Route path='/' element={<Layout />} />
         <Route path='/home' element={<Home />}/>
@@ -42,6 +39,7 @@ const Header = () => {
   return (
     <>
       <header id='header_ID' className="App-header">
+        <Navbar />
         This is the Header component.
         <p>You have chose {emotion}</p>
         <button onClick={() => setEmotion("happy")}>Change emotion</button>
@@ -55,8 +53,9 @@ const Header = () => {
 function App() {
   return (
     <div className="App">
-      <Header />
-      Hello
+      <BrowserRouter>
+        <MyRoutes />
+      </BrowserRouter>
     </div>
   );
 }
